@@ -1,0 +1,277 @@
+# ============================================================
+#  ShadowDrop - Security Edition
+#  Developer : ATHEX BLACK HAT
+#  Version   : 1.0.0
+#  Purpose   : Ignore build artifacts, secrets, and local configs
+# ============================================================
+
+
+# ------------------------------------------------------------
+#  🔴 CRITICAL - NEVER COMMIT THESE
+# ------------------------------------------------------------
+
+# Real lab configs (contain actual IPs / URLs / credentials)
+configs/*.json
+!configs/example_config.json
+!configs/*.example.json
+
+# Build outputs (real droppers - sensitive)
+output/*
+!output/.gitkeep
+
+# Build logs (may contain target info)
+logs/*
+!logs/.gitkeep
+
+# Temp build workspace
+temp/*
+!temp/.gitkeep
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Secrets / keys
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+.secrets/
+
+# Payloads (never commit actual payloads)
+payloads/
+*.payload
+*.stager
+*.bin
+
+
+# ------------------------------------------------------------
+#  🐍 PYTHON
+# ------------------------------------------------------------
+
+# Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+.ENV/
+venv.bak/
+
+# PyCharm / IDE
+.idea/
+*.iml
+
+# Jupyter
+.ipynb_checkpoints/
+
+# pytest / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# pyenv
+.python-version
+
+
+# ------------------------------------------------------------
+#  📦 PYINSTALLER
+# ------------------------------------------------------------
+
+# Spec files (regenerated each build)
+*.spec
+
+# PyInstaller build artifacts
+build/
+dist/
+__pycache__/
+
+# PyInstaller work dirs
+*.manifest
+*.pyc
+
+# EXE/DLL outputs (never commit)
+*.exe
+*.dll
+*.so
+*.dylib
+
+# But keep config example
+!configs/example_config.json
+
+
+# ------------------------------------------------------------
+#  🖥️ WINDOWS
+# ------------------------------------------------------------
+
+# Windows thumbnail cache
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Windows shortcuts
+*.lnk
+
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Desktop.ini
+$RECYCLE.BIN/
+Desktop.ini
+
+# Crash dumps
+*.stackdump
+
+
+# ------------------------------------------------------------
+#  🍎 macOS
+# ------------------------------------------------------------
+
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Icon files (macOS)
+Icon
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+
+# ------------------------------------------------------------
+#  🐧 LINUX
+# ------------------------------------------------------------
+
+*~
+.directory
+.Trash-*
+.nfs*
+
+
+# ------------------------------------------------------------
+#  💻 EDITORS / IDEs
+# ------------------------------------------------------------
+
+# VS Code
+.vscode/*
+!.vscode/settings.json.example
+!.vscode/extensions.json.example
+!.vscode/launch.json.example
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+tags
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# Nano
+*.save
+
+# JetBrains
+.idea/
+*.iml
+*.iws
+*.ipr
+
+
+# ------------------------------------------------------------
+#  🔧 PROJECT-SPECIFIC
+# ------------------------------------------------------------
+
+# Compiled dropper outputs (keep folder, ignore contents)
+output/*.exe
+output/*.py
+output/*.bin
+
+# Generated source (temp)
+dropper_source.py
+cleanup.bat
+
+# Build artifacts
+*.log
+build_*.log
+
+# Local test scripts
+test_*.py
+!tests/test_*.py
+
+# Notes (private)
+NOTES.md
+TODO.local.md
+*.local.md
+
+
+# ------------------------------------------------------------
+#  📋 KEEP THESE FILES (even if pattern matches)
+# ------------------------------------------------------------
+
+!.gitignore
+!.gitkeep
+!README.md
+!LICENSE
+!requirements.txt
+!builder.py
+
+# Keep folder placeholders
+!output/.gitkeep
+!logs/.gitkeep
+!temp/.gitkeep
+!configs/example_config.json
+!assets/icons/.gitkeep
+!assets/version_info/.gitkeep
