@@ -1,0 +1,7 @@
+#  ShadowDrop - Security Edition
+#  Developer : ATHEX BLACK HAT
+#  Version   : 1.0.0
+
+pyinstaller    
+pyinstaller-hooks-contrib
+colorama
